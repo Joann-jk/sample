@@ -1,5 +1,8 @@
 *{
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family:'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+   
 }
 /* Cool infinite background scrolling animation.
  * Twitter: @kootoopas
@@ -73,6 +76,212 @@ body::before {
   
   
 }
+
+
+.top-nav-wrapper {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1030;
+}
+
+.top-contact-bar {
+    background-color: #000080;
+    padding: 10px 0;
+    transition: transform 0.3s ease-in-out;
+}
+
+.contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+.contact-item {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+}
+
+.contact-item:hover {
+    color: #f8f9fa;
+}
+
+.main-navbar {
+    background-color: white;
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.navbar p{
+    color: #000080 ;
+    margin-top: -3px;
+
+}
+.nav-link {
+    color: #333;
+    font-weight: 800;
+}
+
+.nav-link:hover {
+    color: #000080;
+}
+
+/* Hide top bar on scroll */
+.hide-top-bar .top-contact-bar {
+    transform: translateY(-100%);
+}
+
+.carousel-item {
+    height: 100vh;
+}
+
+.carousel-item img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    bottom: 50%;
+    transform: translateY(50%);
+    max-width: 80%;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+}
+
+.carousel-caption h5 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.carousel-caption p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.btn-warning {
+    padding: 10px 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.btn-warning:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+.services {
+    padding: 80px 0;
+    background-color: #fff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.section-header p {
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 20px;
+}
+
+.card {
+    background-color: #2d2d2d;
+    border-radius: 10px;
+    padding: 40px 30px;
+    text-align: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-icon {
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.card-title {
+    color: white;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.card-text {
+    color: #e0e0e0;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    flex-grow: 1;
+}
+
+.read-more {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #ffc107;
+    color: #000;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.read-more:hover {
+    background-color: #ffca2c;
+}
+
+@media (max-width: 768px) {
+    .section-header h2 {
+        font-size: 2rem;
+    }
+    
+    .cards-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-container {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
 .section-padding{
     padding:100px 0;
 }
@@ -110,35 +319,11 @@ body::before {
 
 
 
-.navbar-nav a{
-    font-size: 15px;
-    text-transform:uppercase;
-    font-weight: 500;
-}
-.navbar-light .navbar-brand{
-    color:#000;
-    font-size:25px;
-    text-transform:uppercase;
-    font-weight:700;
-    letter-spacing:2px;
 
-}
-.navbar-light ,navbar-brand:focus,
-.navbar-light ,navbar-brand:hover{
-    color:black;
-}
-
-.navbar-light .navbar-nav .navbar-link{
-    color:#000;}
-    .w-100{
-        height:100vh;
-    }
 .services .card-body i{
     font-size: 50px;
 }
-.team .card-body i{
-    font-size: 20px;
-}
+
 .projects .section-padding .card{
     box-shadow: 15px 15px 40px rgba(0, 0, 0, 0.15);
     
@@ -148,11 +333,7 @@ body::before {
     box-shadow: 15px 15px 40px rgba(0,0,0,0.15);
    
 }
-.team .card{
-    margin-bottom: 40px;
-   
 
-}
 .team img {
     width: 250px;  /* Set a fixed width */
     height: 350px; /* Set equal height to make it square */
@@ -160,19 +341,149 @@ body::before {
     border-radius: 10px; /* Optional: adds slightly rounded corners */
    
   }
+  /* Team Section Styling */
+.team {
+    padding: 80px 0;
+    background: #f8f9faa0;
+}
+
+/* Section Header Styling */
+.section-header {
+    margin-bottom: 40px;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.section-header p {
+    color: #666;
+    font-size: 1.1rem;
+}
+
+/* Card Styling */
+.team .card {
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    margin-bottom: 30px;
+    border-radius: 15px;
+    height: 100%; /* Make all cards same height */
+    display: flex;
+    flex-direction: column;
+}
+
+.team .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Image Styling */
+.team .card .img {
+    width: 180px;
+    height: 250px;
+    border-radius: 0%;
+    margin: 20px auto;
+    object-fit: cover;
+    border: 5px solid #f8f9fa;
+}
+
+/* Card Content Styling */
+.team .card-body {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Allow content to fill space */
+}
+
+.team .card-title {
+    font-size: 1.25rem;
+    margin: 0;
+    color: #2c3e50;
+}
+
+.team .card-title:first-child {
+    color: #e65100;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.team .card-text {
+    color: #070707;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin: 15px 0;
+    flex-grow: 1; /* Allow text to fill available space */
+}
+
+/* Social Icons Styling */
+.team .socials {
+    margin-top: auto; /* Push social icons to bottom */
+    padding: 15px 0;
+}
+
+.team .socials i {
+    font-size: 1.5rem;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.team .socials i:hover {
+    color: #e65100 !important;
+}
+.team .row {
+    margin-bottom: 40px; /* Adds space between rows */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .team {
+        padding: 40px 0;
+    }
+    
+    .section-header h2 {
+        font-size: 2rem;
+    }
+    
+    .team .card {
+        margin-bottom: 20px;
+    }
+    
+    .team .card .img {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .team .card-text {
+        font-size: 0.85rem;
+    }
+}
 .row .card-body{
     background-color:#eeeeee5a;
 }
 /* Adjusting logo position */
 .about-img{
     padding: 50px;
+    padding-top: 100px;
 }
 
 .about-text h2{
-   
+    width: 600px;
     font-size:xx-large;
-}
+    margin-bottom: 30px;
+    padding-left: 30px;
+    margin-top: 60px;
 
+}
+.about-text p{
+    
+    width: 500px;
+    margin-left: 60px;
+}
 
 .contact{
     background-color:#eeeeee82;
@@ -219,64 +530,674 @@ body::before {
 }
 
 
-.projects {
+
+
+.director-message {
     padding: 80px 0;
    
 }
 
-.section-title {
-    text-align: center;
-    margin-bottom: 50px;
-}
-
-.project-card {
+.message-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
     position: relative;
-    overflow: hidden;
-    border-radius: 10px;
-    margin-bottom: 30px;
-    box-shadow: 0 6px 8px rgba(0,0,0,0.1);
-    transition: all 0.3s ease;
-}
-
-.project-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-}
-
-.project-card img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-}
-
-.project-info {
-    position: absolute;
-    bottom: -100%;
-    left: 0;
-    width: 100%;
     padding: 20px;
-    background: rgba(0, 0, 0, 0.8);
-    color: white;
-    transition: all 0.3s ease;
 }
 
-.project-card:hover .project-info {
-    bottom: 0;
+.wave-decoration {
+    margin-bottom: 10px;
 }
 
-.project-info h4 {
-    margin: 0 0 10px 0;
-    font-size: 1.2rem;
+.wave {
+    width: 100px;
+    margin: 0 auto;
+    display: block;
 }
 
-.project-info p {
-    margin: 0;
-    font-size: 0.9rem;
+.director-image {
+    margin: 30px auto;
+    width: 350px;
+    height: 250px;
+    overflow: hidden;
+}
+
+.director-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 1px solid #f8f9fa;
+}
+
+.message-heading {
+    color: #ff4d6d;
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+.from-heading {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+
+.message-text {
+    color: #666;
+    line-height: 1.8;
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 @media (max-width: 768px) {
-    .project-card img {
-        height: 250px;
+    .message-heading {
+        font-size: 2rem;
+    }
+    
+    .from-heading {
+        font-size: 1.5rem;
+    }
+    
+    .message-text {
+        font-size: 1rem;
+    }
+}
+/* Mobile Responsiveness Fixes */
+@media only screen and (max-width: 426px) {
+    /* Fix overflow issues */
+    html, body {
+        overflow-x: hidden;
+        width: 100%;
+        position: relative;
+    }
+    
+    /* Container adjustments */
+    .container {
+        padding: 0 10px;
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    /* Carousel adjustments */
+    .carousel-caption {
+        bottom: 100px;
+        padding: 10px;
+    }
+    
+    .carousel-caption h5 {
+        font-size: 16px;
+        margin-top: 15px;
+    }
+    
+    .carousel-caption p {
+        width: 100%;
+        font-size: 12px;
+        line-height: 1.4;
+    }
+    
+    /* Services section */
+    .services {
+        padding: 40px 0;
+    }
+    
+    .cards-container {
+        padding: 10px;
+    }
+    
+    .card {
+        margin: 0 auto;
+        width: 100%;
+    }
+    
+    /* About section */
+    .about-text h2 {
+        width: 100%;
+        padding-left: 15px;
+        font-size: 24px;
+    }
+    
+    .about-text p {
+        width: 100%;
+        margin-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .about-img {
+        padding: 20px;
+        padding-top: 50px;
+    }
+    
+    /* Team section */
+    .team .card {
+        margin: 10px auto;
+        
+    }
+    
+    .team .card .img {
+        width: 140px;
+        height: 170px;
+    }
+    
+    /* Director message section */
+    .director-message {
+        padding: 40px 0;
+    }
+    
+    .message-wrapper {
+        padding: 10px;
+    }
+    
+    .director-image {
+        width: 100%;
+        height: 200px;
+    }
+    
+    .message-heading {
+        font-size: 24px;
+    }
+    
+    .from-heading {
+        font-size: 20px;
     }
 }
 
+/* Specific adjustments for 320px */
+
+
+/* Specific adjustments for 375px */
+@media only screen and (max-width: 375px) {
+    .carousel-caption {
+        bottom: 90px;
+    }
+    
+    .section-padding {
+        padding: 60px 0;
+    }
+    
+    .card-title {
+        font-size: 1.3rem;
+    }
+}
+@media only screen and (max-width: 325px) {
+    
+}
+@media only screen and (max-width: 320px) {
+    
+}
+
+/* 375px - Medium Mobile Screens */
+@media only screen and (min-width: 321px) and (max-width: 378px) {
+    .carousel-item {
+        height: 65vh;
+        min-height: 280px;
+    }
+    
+    .carousel-caption {
+        bottom: 50%;
+        padding: 12px;
+        max-width: 92%;
+    }
+    
+    .carousel-caption h5 {
+        font-size: 18px;
+        margin-bottom: 8px;
+    }
+    
+    .carousel-caption p {
+        font-size: 13px;
+        line-height: 1.4;
+        margin-bottom: 8px;
+    }
+    
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 12%;
+    }
+    
+    .carousel-indicators {
+        margin-bottom: 0.75rem;
+    }
+    
+    .carousel-indicators [data-bs-target] {
+        width: 28px;
+        height: 3px;
+        margin: 0 3px;
+    }
+    .team .section-padding.card{
+        box-shadow: 15px 15px 40px rgba(0,0,0,0.15);
+       
+    }
+    
+    .team img {
+        width: 250px;  /* Set a fixed width */
+        height: 550px; /* Set equal height to make it square */
+        object-fit:cover; /* This ensures the image covers the square area without distortion */
+        border-radius: 10px; /* Optional: adds slightly rounded corners */
+       
+      }
+      /* Team Section Styling */
+    .team {
+        padding: 80px 0;
+        background: #f8f9faa0;
+    }
+    
+}
+
+/* 425px - Large Mobile Screens */
+@media only screen and (min-width: 376px) and (max-width: 425px) {
+    .carousel-item {
+        height: 70vh;
+        min-height: 300px;
+    }
+    
+    .carousel-caption {
+        bottom: 50%;
+        padding: 15px;
+        max-width: 90%;
+    }
+    
+    .carousel-caption h5 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    
+    .carousel-caption p {
+        font-size: 14px;
+        line-height: 1.5;
+        margin-bottom: 10px;
+    }
+    
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 15%;
+    }
+    
+    .carousel-indicators {
+        margin-bottom: 1rem;
+    }
+    
+    .carousel-indicators [data-bs-target] {
+        width: 30px;
+        height: 3px;
+        margin: 0 3px;
+    }
+}
+
+/* 768px - Tablet Screens */
+@media only screen and (min-width: 426px) and (max-width: 768px) {
+    .carousel-item {
+        height: 80vh;
+        min-height: 350px;
+    }
+    
+    .carousel-caption {
+        bottom: 50%;
+        padding: 20px;
+        max-width: 85%;
+    }
+    
+    .carousel-caption h5 {
+        font-size: 24px;
+        margin-bottom: 12px;
+    }
+    
+    .carousel-caption p {
+        font-size: 16px;
+        line-height: 1.6;
+        margin-bottom: 15px;
+    }
+    
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 8%;
+    }
+    
+    .carousel-indicators {
+        margin-bottom: 1.5rem;
+    }
+    
+    .carousel-indicators [data-bs-target] {
+        width: 35px;
+        height: 4px;
+        margin: 0 4px;
+    }
+}
+
+/* Common hover effects for controls */
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+/* Ensure smooth transitions */
+.carousel-item,
+.carousel-caption,
+.carousel-control-prev,
+.carousel-control-next {
+    transition: all 0.3s ease-in-out;
+}
+
+
+/* Mobile - 375px */
+@media only screen and (min-width: 321px) and (max-width: 375px) {
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 6px;
+        gap: 6px;
+    }
+    
+    .contact-item {
+        font-size: 12px;
+    }
+    
+    .navbar-brand img {
+        height: 27px;
+    }
+    
+    .navbar p {
+        font-size: 13px;
+    }
+    
+    .nav-link {
+        font-size: 15px;
+        padding: 8px 14px;
+    }
+}
+
+/* Mobile - 425px */
+@media only screen and (min-width: 376px) and (max-width: 426px) {
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 8px;
+        gap: 8px;
+    }
+    
+    .contact-item {
+        font-size: 13px;
+    }
+    
+    .navbar-brand img {
+        height: 28px;
+    }
+    
+    .navbar p {
+        font-size: 14px;
+    }
+    
+    .nav-link {
+        font-size: 16px;
+        padding: 8px 15px;
+    }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 426px) and (max-width: 769px) {
+    .contact-container {
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 8px 15px;
+        gap: 15px;
+    }
+    
+    .contact-item {
+        font-size: 14px;
+    }
+    
+    .navbar-brand img {
+        height: 30px;
+    }
+    
+    .navbar p {
+        font-size: 16px;
+    }
+    
+    .nav-link {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+}
+@media (max-width: 326px) {
+    .carousel-item {
+        height: 60vh;
+        min-height: 250px;
+    }
+    
+    .carousel-caption {
+        bottom: 50%;
+        padding: 10px;
+        max-width: 95%;
+    }
+    
+    .carousel-caption h5 {
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+    
+    .carousel-caption p {
+        font-size: 12px;
+        line-height: 1.3;
+        margin-bottom: 5px;
+    }
+    
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 10%;
+    }
+    
+    .carousel-indicators {
+        margin-bottom: 0.5rem;
+    }
+    
+    .carousel-indicators [data-bs-target] {
+        width: 25px;
+        height: 3px;
+        margin: 0 2px;
+    }
+    .top-contact-bar {
+        padding: 5px 0;
+        margin: 0;
+        width: 100%;
+    }
+    
+    
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 5px;
+        gap: 5px;
+        width: 100dvw;
+    }
+    
+    .contact-item {
+        font-size: 11px;
+        
+       
+    }
+    
+    .navbar-brand img {
+        height: 25px;
+    }
+    
+    .navbar p {
+        font-size: 12px;
+    }
+    
+    .nav-link {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+    
+    .navbar-toggler {
+        padding: 4px 8px;
+      
+       
+    }
+    .carousel-caption {
+        bottom: 80px;
+        
+        font-size: 40px;
+    }
+    .carousel-inner{
+        width: 100dvw;
+    }
+    .carousel-caption h5 {
+        font-size: 14px;
+    }
+    
+    .section-header h2 {
+        font-size: 24px;
+    }
+    
+    .card {
+        padding: 20px 15px;
+    }
+    .team .section-padding.card{
+        box-shadow: 15px 15px 40px rgba(0,0,0,0.15);
+        padding-bottom: 20px;
+       
+    }
+    
+    .team img {
+        width: 250px;  /* Set a fixed width */
+        height: 550px; /* Set equal height to make it square */
+        object-fit:cover; /* This ensures the image covers the square area without distortion */
+        border-radius: 70px; /* Optional: adds slightly rounded corners */
+       
+      }
+      /* Team Section Styling */
+    .team {
+        padding: 80px 0;
+        background: #f8f9faa0;
+    }
+}
+.map-section {
+    background-color: #f8f9fa;
+    padding: 80px 0;
+}
+
+.map-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.map-responsive {
+    overflow: hidden;
+    padding-bottom: 56.25%; 
+    position: relative;
+    height: 0;
+}
+
+.map-responsive iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+.contact-section {
+    flex-basis: 30%;
+}
+
+.contact-section h3 {
+    margin-bottom: 1rem;
+}
+
+.contact-section a {
+    margin-bottom: 0.5rem;
+}
+.text-black{
+    color: #000000;
+}
+/* 325px */
+@media (max-width: 325px) {
+    .map-section {
+        padding: 40px 0;
+    }
+
+    .map-container {
+        max-width: 100%;
+        border-radius: 0;
+    }
+
+    .map-responsive iframe {
+        height: 300px;
+    }
+
+    .contact-section {
+        margin-top: 20px;
+        padding: 0 10px;
+    }
+
+    .contact-section h3 {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .contact-section a {
+        font-size: 0.9rem;
+        margin-bottom: 0.3rem;
+    }
+
+    .contact-section p {
+        font-size: 0.8rem;
+    }
+}
+
+/* 375px */
+@media (max-width: 375px) {
+    .map-responsive iframe {
+        height: 350px;
+    }
+
+    .contact-section {
+        margin-top: 30px;
+    }
+}
+
+/* 425px */
+@media (max-width: 425px) {
+    .map-responsive iframe {
+        height: 400px;
+    }
+
+    .contact-section {
+        margin-top: 40px;
+    }
+}
+
+/* 768px */
+@media (max-width: 768px) {
+    .containerf {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .map-section {
+        width: 100%;
+    }
+
+    .contact-section {
+        width: 100%;
+        margin-top: 40px;
+        text-align: center;
+    }
+}
+
+/* 1440px */
+@media (min-width: 1440px) {
+    .containerf {
+        max-width: 1400px;
+    }
+
+    .map-responsive iframe {
+        height: 500px;
+    }
+}
