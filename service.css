@@ -146,14 +146,14 @@ body::before {
 
 .section-header {
     text-align: center;
-    margin-bottom: 70px;
+    margin-bottom: 50px;
 }
 
 .section-header h2 {
     font-size: 2.5rem;
     color: #333;
     margin-bottom: 20px;
-    margin-top: 20px;
+    margin-top: 50px;
 }
 
 .section-header p {
@@ -204,7 +204,9 @@ body::before {
     margin-bottom: 30px;
     flex-grow: 1;
 }
+.section-header{
 
+}
 .read-more {
     display: inline-block;
     padding: 12px 30px;
